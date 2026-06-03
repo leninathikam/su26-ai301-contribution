@@ -22,14 +22,11 @@
 [stagewise-io/stagewise](https://github.com/stagewise-io/stagewise) — an open-source, developer-focused browser with a coding agent built in. It lets developers select DOM elements in a real browser tab and have an AI agent implement code changes. Built as a TypeScript monorepo (React 19 + Electron, pnpm + Turborepo, Biome, Vitest).
 
 ### Why I Chose This Issue
-I chose issue #929, "Use Claude Agents inside stagewise," because today stagewise users can't bring an Anthropic/Claude agent they already use into the app — so they either switch tools or give up the higher usage limits of their existing Claude subscription. Fixing this means a user can pick a Claude agent from the agent-creation dropdown and keep working in stagewise with the agent and subscription they already rely on, which improves adoption and day-to-day workflow.
+Right now, if you already use Claude as your coding agent, you can't use it inside stagewise — you have to switch tools or lose the higher limits that come with your Claude subscription. This issue is about fixing that: letting people pick a Claude agent right from the agent dropdown and keep working in stagewise with the setup they already pay for.
 
-I'm interested in this because:
-1. The codebase is primarily TypeScript and React 19, which match my current skills, so I can be productive in the UI and integration layers right away.
-2. It's a great learning goal for me: I want to get hands-on with Electron (desktop main/preload processes) and with integrating an external coding-agent over stdio/SDK — areas I can ramp up on with AI assistance.
-3. The maintainer (@glenntws) is active (commented within the last few weeks), the issue is unassigned with no open PR, and the project has strong setup docs (CONTRIBUTING.md + CLAUDE.md), so I can get the project running and get feedback quickly.
+I picked it for a few reasons. The project is mostly TypeScript and React, which I'm already comfortable with, so I can start contributing without a huge learning curve. At the same time, it pushes me into areas I want to learn — Electron and wiring up an external agent — which I'm excited to dig into with some AI help. And the issue itself looks like a good one to jump on: the maintainer is active, nobody's claimed it yet, there's no open PR, and the setup docs are solid.
 
-**What "fixed" looks like (my current understanding):** a user can select a Claude agent alongside the existing first-class stagewise agents and interact with it inside the app. Because the maintainer is still weighing approaches (SDK vs. CLI/`-p` vs. an embedded terminal view to preserve subscription limits), my first step in Phase II is to confirm the intended direction with the maintainer and scope a small, achievable first slice rather than building the whole feature at once.
+One thing I noticed is that the maintainer is still deciding *how* to build this (SDK vs. CLI vs. an embedded terminal view). So my plan for Phase II is to check in with them first, agree on a direction, and start with a small, doable first piece instead of trying to ship the whole feature at once.
 
 ### Community Engagement
 - [x] Commented on the issue expressing interest
