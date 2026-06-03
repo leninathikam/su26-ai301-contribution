@@ -22,12 +22,11 @@
 [stagewise-io/stagewise](https://github.com/stagewise-io/stagewise) — an open-source, developer-focused browser with a coding agent built in. It lets developers select DOM elements in a real browser tab and have an AI agent implement code changes. Built as a TypeScript monorepo (React 19 + Electron, pnpm + Turborepo, Biome, Vitest).
 
 ### Why I Chose This Issue
-Right now, if you already use Claude as your coding agent, you can't use it inside stagewise — you have to switch tools or lose the higher limits that come with your Claude subscription. This issue is about fixing that: letting people pick a Claude agent right from the agent dropdown and keep working in stagewise with the setup they already pay for.
+Right now, if you already use Claude as your coding agent, you can't use it inside stagewise. You have to switch tools or lose the higher limits that come with your Claude subscription. This issue is about fixing that by letting people pick a Claude agent right from the agent dropdown and keep working in stagewise with the setup they already pay for.
 
-I picked it for a few reasons. The project is mostly TypeScript and React, which I'm already comfortable with, so I can start contributing without a huge learning curve. At the same time, it pushes me into areas I want to learn — Electron and wiring up an external agent — which I'm excited to dig into with some AI help. And the issue itself looks like a good one to jump on: the maintainer is active, nobody's claimed it yet, there's no open PR, and the setup docs are solid.
+I picked it for a few reasons. The project is mostly TypeScript and React, which I'm already comfortable with, so I can start contributing without a huge learning curve. At the same time, it pushes me into areas I want to learn, such as Electron and wiring up an external agent, which I'm excited to dig into with some AI help. The issue itself also looks like a good one to jump on. The maintainer is active, nobody has claimed it yet, there is no open PR, and the setup docs are solid.
 
-One thing I noticed is that the maintainer is still deciding *how* to build this (SDK vs. CLI vs. an embedded terminal view). So my plan for Phase II is to check in with them first, agree on a direction, and start with a small, doable first piece instead of trying to ship the whole feature at once.
-
+One thing I noticed is that the maintainer is still deciding how to build this, whether through an SDK, CLI, or an embedded terminal view. My plan for Phase II is to check in with them first, agree on a direction, and start with a small, manageable first piece instead of trying to ship the whole feature at once.
 ### Community Engagement
 - [x] Commented on the issue expressing interest
 - [x] Noted the issue on the cohort Google Sheet
