@@ -7,7 +7,7 @@
 |---|---|
 | **Name** | Lenin Goud Athikam |
 | **GitHub** | @leninathikam |
-| **Status** | 🟡 Phase I — Issue Selection |
+| **Status** | ✅ Phase I Complete |
 | **Project** | [stagewise-io/stagewise](https://github.com/stagewise-io/stagewise) — a developer browser with a built-in coding agent |
 | **Issue** | [#929 — Use Claude Agents inside stagewise](https://github.com/stagewise-io/stagewise/issues/929) |
 
@@ -31,23 +31,10 @@ I'm interested in this because:
 
 **What "fixed" looks like (my current understanding):** a user can select a Claude agent alongside the existing first-class stagewise agents and interact with it inside the app. Because the maintainer is still weighing approaches (SDK vs. CLI/`-p` vs. an embedded terminal view to preserve subscription limits), my first step in Phase II is to confirm the intended direction with the maintainer and scope a small, achievable first slice rather than building the whole feature at once.
 
-### Issue Selection Checklist
-<!-- Score yourself on the 6 checks. Keep it 4/6 or higher. -->
-| Check | Pass? | Notes |
-|---|---|---|
-| 1. I understand the problem | ✅ | Let users run a Claude agent (with their own subscription) inside stagewise. |
-| 2. Scope fits 3–4 weeks | ⚠️ | It's a multi-part `Feature`; I'll scope a smaller first slice with the maintainer in Phase II. |
-| 3. Matches my skills (or learnable with AI) | ✅ | Strong on TypeScript + React; Electron + agent-stdio is my learn-with-AI area. |
-| 4. Active and claimable (unassigned, no open PR) | ⚠️ | Unassigned, no open PR, maintainer active recently — but labeled `under investigation` and approach not yet settled. |
-| 5. Helpful context (maintainer comments, code links) | ✅ | Maintainer left implementation notes + a follow-up comment. |
-| 6. Clear setup docs (README / CONTRIBUTING) | ✅ | CONTRIBUTING.md + CLAUDE.md; `pnpm install && pnpm dev`. |
-
-**Score:** 4 / 6 (with two noted concerns I'll de-risk by confirming scope/approach with the maintainer before building)
-
 ### Community Engagement
-- [ ] Commented on the issue expressing interest
-- [ ] Noted the issue on the cohort Google Sheet
-- [ ] Forked the project: https://github.com/leninathikam/stagewise
+- [x] Commented on the issue expressing interest
+- [x] Noted the issue on the cohort Google Sheet
+- [x] Forked the project: https://github.com/leninathikam/stagewise
 
 ---
 
