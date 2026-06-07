@@ -8,29 +8,28 @@
 | **Name** | Lenin Goud Athikam |
 | **GitHub** | @leninathikam |
 | **Status** | ✅ Phase I Complete |
-| **Project** | [stagewise-io/stagewise](https://github.com/stagewise-io/stagewise) — a developer browser with a built-in coding agent |
-| **Issue** | [#929 — Use Claude Agents inside stagewise](https://github.com/stagewise-io/stagewise/issues/929) |
+| **Project** | [ponylang/ponyc](https://github.com/ponylang/ponyc) — the Pony programming language compiler |
+| **Issue** | [#4705 — Setup CI to use Flight Recorder](https://github.com/ponylang/ponyc/issues/4705) |
 
 ---
 
 ## Phase I — Issue Selection
 
 ### Issue
-[stagewise-io/stagewise #929 — Use Claude Agents inside stagewise](https://github.com/stagewise-io/stagewise/issues/929)
+[ponylang/ponyc #4705 — Setup CI to use Flight Recorder](https://github.com/ponylang/ponyc/issues/4705)
 
 ### Project
-[stagewise-io/stagewise](https://github.com/stagewise-io/stagewise) — an open-source, developer-focused browser with a coding agent built in. It lets developers select DOM elements in a real browser tab and have an AI agent implement code changes. Built as a TypeScript monorepo (React 19 + Electron, pnpm + Turborepo, Biome, Vitest).
+[ponylang/ponyc](https://github.com/ponylang/ponyc) — the open-source compiler and runtime for the Pony programming language (6k+ GitHub stars). CI runs on GitHub Actions across PR tests, use-flag builds, and stress tests. Contributions follow standard fork-and-PR workflow with CONTRIBUTING.md and Makefile-based builds.
 
 ### Why I Chose This Issue
-Right now, if you already use Claude as your coding agent, you can't use it inside stagewise. You have to switch tools or lose the higher limits that come with your Claude subscription. This issue is about fixing that by letting people pick a Claude agent right from the agent dropdown and keep working in stagewise with the setup they already pay for.
+The Pony runtime recently gained flight recording — it buffers tracing events in memory and dumps them on crashes (SIGSEGV, etc.) — but CI does not use it yet. Without this, CI failures give less diagnostic information than they could. This issue asks to enable flight recorder in standard PR and stress CI jobs, add a new "vanilla" use test (build with no use flags), remove the now-redundant runtime-tracing-only use test, and dump flight recorder output to CI logs (stdout/stderr) instead of uploading artifacts.
 
-I picked it for a few reasons. The project is mostly TypeScript and React, which I'm already comfortable with, so I can start contributing without a huge learning curve. At the same time, it pushes me into areas I want to learn, such as Electron and wiring up an external agent, which I'm excited to dig into with some AI help. The issue itself also looks like a good one to jump on. The maintainer is active, nobody has claimed it yet, there is no open PR, and the setup docs are solid.
+I chose this because the scope is well-defined in the issue body: specific workflows to change and clear acceptance criteria for what "done" looks like. It is labeled `good first issue` and `help wanted`, nobody is assigned, and there is no open PR. The work is CI/DevOps focused (GitHub Actions YAML, build flags) rather than deep compiler internals, which lets me contribute meaningfully while learning the project's test infrastructure. "Fixed" means PR and stress pipelines build with flight recorder, vanilla compilation is covered, redundant tracing use tests are removed, and CI logs capture flight recorder output on failure.
 
-One thing I noticed is that the maintainer is still deciding how to build this, whether through an SDK, CLI, or an embedded terminal view. My plan for Phase II is to check in with them first, agree on a direction, and start with a small, manageable first piece instead of trying to ship the whole feature at once.
 ### Community Engagement
 - [x] Commented on the issue expressing interest
-- [x] Noted the issue on the cohort Google Sheet
-- [x] Forked the project: https://github.com/leninathikam/stagewise
+- [ ] Noted the issue on the cohort Google Sheet
+- [x] Forked the project: https://github.com/leninathikam/ponyc
 
 ---
 
